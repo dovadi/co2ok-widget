@@ -23,9 +23,11 @@ build:
   # http://devcenter.wercker.com/docs/steps/index.html
   steps:
     # Install elm
-    - npm install -g elm
+    - script:
+      code: npm install -g elm
     # A step that executes `elm install` command
-    - elm install
+    - script:
+      code: elm install
     # A step that executes `elm test` command
     # - elm test
 
