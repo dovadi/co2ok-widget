@@ -37,8 +37,7 @@ build:
     # and the code value contains the command that get executed
     - script:
         name: build deliverables
-        code: |
-          elm make src/Main.elm --output=public/widget.html
+        code: elm make src/Main.elm --output=public/widget.html
 
 deploy:
   steps:
