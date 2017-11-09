@@ -36,4 +36,14 @@ build:
     - script:
         name: build deliverables
         code: |
-          elm make
+          elm make --output=public/widget.html
+
+deploy:
+  steps:
+    - s3sync:
+        key_id: $KEY
+        key_secret: $SECRET
+        bucket_url: $URL
+        source_dir: public/
+        delete_removed: false
+        opts: --add-header=Cache-Control:max-age=1
