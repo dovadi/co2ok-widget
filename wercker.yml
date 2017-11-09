@@ -33,6 +33,15 @@ build:
     # A step that executes `elm test` command
     # - elm test
 
+    - script:
+        name: symlink elm to wercker cache
+        code: ln -s elm-stuff/build-artifacts $WERCKER_CACHE_DIR/build-artifacts
+
+# Travis does caching quite a bit better:
+# cache:
+#   directories:
+#     - elm-stuff/build-artifacts
+
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
@@ -48,3 +57,4 @@ deploy:
         source_dir: public/
         delete_removed: false
         opts: --add-header=Cache-Control:max-age=1
+
