@@ -114,13 +114,14 @@ viewBoxLayout =
         { columns = [ px 200, px 200, px 20, fill ]
         , rows =
             [ px 42 => [ span 3 "content", span 1 "sidebar" ]
+            , px 42 => [ span 3 "content2", span 1 "sidebar" ]
             ]
         , cells =
-          [ named "header"
-            (el Box [] (text "box"))
+          [ named "content2"
+            (el Box [] (text "info"))
               -- button [ onClick Compensate ] [ text "Make CO2ok" ]
-          , named "sidebar"
-              (el Box [] (text "Make CO₂ok"))
+          , named "content"
+            (full Box [] (text "Make CO₂ok"))
           ]
         }
     ]
