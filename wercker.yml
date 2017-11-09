@@ -27,7 +27,7 @@ build:
       code: npm install -g elm
     # A step that executes `elm install` command
     - script:
-      code: elm install
+      code: elm -y install
     # A step that executes `elm test` command
     # - elm test
 
