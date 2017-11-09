@@ -4,7 +4,7 @@
     "repository": "https://github.com/Mil0dV/co2ok-widget.git",
     "license": "GPL",
     "source-directories": [
-        "nesting"
+        "src"
     ],
     "exposed-modules": [],
     "dependencies": {

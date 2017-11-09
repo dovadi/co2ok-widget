@@ -24,9 +24,11 @@ build:
   steps:
     # Install elm
     - script:
+      name: install elm
       code: npm install -g elm
     # A step that executes `elm install` command
     - script:
+      name: install elm packages
       code: elm package install -y
     # A step that executes `elm test` command
     # - elm test
@@ -36,7 +38,7 @@ build:
     - script:
         name: build deliverables
         code: |
-          elm make --output=public/widget.html
+          elm make src/Main.elm --output=public/widget.html
 
 deploy:
   steps:
