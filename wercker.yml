@@ -42,9 +42,9 @@ build:
 deploy:
   steps:
     - s3sync:
-        key_id: $KEY
-        key_secret: $SECRET
-        bucket_url: $URL
+        key_id: $AWS_KEY
+        key_secret: $AWS_SECRET
+        bucket_url: $BUCKET_URL
         source_dir: public/
         delete_removed: false
         opts: --add-header=Cache-Control:max-age=1
